@@ -16,8 +16,12 @@ $(window).on('load', function() {
 	--------------------*/
 	$(".loader").fadeOut(); 
 	$("#preloder").delay(400).fadeOut("slow");
-
+	get_request();
 });
+function get_request () {
+	console.log('calling this every 30 sec');
+	setTimeout(get_request, 3000);
+}
 
 
 (function($) {
