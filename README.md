@@ -14,7 +14,7 @@
 
 **use devcon;**
 
-**create table userdata(id int(10) NOT NULL AUTO_INCREMENT, image VARCHAR(500) NOT NULL, name VARCHAR(50) NOT NULL, visitorid VARCHAR(40) NOT NULL, stalls int(10), PRIMARY KEY (id)); **
+**create table userdata(id int(10) NOT NULL AUTO_INCREMENT, image VARCHAR(500) NOT NULL, name VARCHAR(50) NOT NULL, visitorid VARCHAR(40) NOT NULL, stalls int(10), PRIMARY KEY (id));**
 
 **curl localhost:5000/echo -d '{"Image": "https://www.pinclipart.com/picdir/big/351-3516708_addthis-sharing-buttons-golang-gopher-draw-png-clipart.png", "Name": "GoMan", "VisitorId": "GO1", "Stalls": "8"}'**
 
