@@ -1,3 +1,5 @@
+curl localhost:5000/echo -d '{"Image": "https://www.pinclipart.com/picdir/big/351-3516708_addthis-sharing-buttons-golang-gopher-draw-png-clipart.png", "Name": "GoMan", "VisitorId": "GO1", "Stalls": "8"}'
+
 Package renderer
 ==================
 [![Build Status](https://travis-ci.org/thedevsaddam/renderer.svg?branch=master)](https://travis-ci.org/thedevsaddam/renderer)
