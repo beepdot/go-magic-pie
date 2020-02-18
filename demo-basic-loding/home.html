@@ -1,0 +1,105 @@
+{{ define "home" }}
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta http-equiv="refresh" content="500" />
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="tpl/img/favicon.png" type="image/png">
+        <title>Magic Mirror</title>
+        <!-- Bootstrap tpl/css/ -->
+        <link rel="stylesheet" href="tpl/css/bootstrap.css">
+        <link rel="stylesheet" href="tpl/vendors/linericon/style.css">
+        <link rel="stylesheet" href="tpl/css/font-awesome.min.css">
+        <link rel="stylesheet" href="tpl/vendors/owl-carousel/owl.carousel.min.css">
+        <link rel="stylesheet" href="tpl/vendors/lightbox/simpleLightbox.css">
+        <link rel="stylesheet" href="tpl/vendors/nice-select/tpl/css/nice-select.css">
+        <link rel="stylesheet" href="tpl/vendors/animate-tpl/css/animate.css">
+        <link rel="stylesheet" href="tpl/vendors/popup/magnific-popup.css">
+        <link rel="stylesheet" href="tpl/vendors/flaticon/flaticon.css">
+        <!-- main tpl/css/ -->
+        <link rel="stylesheet" href="tpl/css/style.css">
+        <link rel="stylesheet" href="tpl/css/responsive.css">
+    </head>
+    <body>
+        
+        <!--================Header Menu Area =================-->
+        <header class="header_area">
+            <div class="main_menu">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container box_1620">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <a class="navbar-brand logo_h" href="index.html"><img src="tpl/img/logo.png" alt=""></a>
+                        </button>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!--================Header Menu Area =================-->
+        
+        <!--================Home Banner Area =================-->
+        <section class="home_banner_area">
+            <div class="container box_1620">
+                <div class="banner_inner d-flex align-items-center">
+                    <div class="banner_content">
+                        <div class="media">
+                            <div class="d-flex">
+                                <img src="tpl/img/avatar.jpg" alt="" width="900" height="700">
+                            </div>
+                            <div class="media-body">
+                                <div class="personal_text">
+                                    <h6>Welcome</h6>
+                                    <h3>{{ .Name }}</h3>
+                                    <ul class="list basic_info">
+                                        <li><a href="#"><i class="lnr lnr-calendar-full"></i> {{ .Dob }}</a></li>
+                                        <li><a href="#"><i class="lnr lnr-phone-handset"></i> {{ .Mobile }}</a></li>
+                                        <li><a href="#"><i class="lnr lnr-envelope"></i> {{ .Email }}</a></li>
+                                        <li><a href="#"><i class="lnr lnr-home"></i> {{.Stalls}} visited</a></li>
+                                    </ul>
+                                    <ul class="list personal_social">
+                                        <h5>Welcome to Devops Stall</h5>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--================End Home Banner Area =================-->
+                
+        <!--================Footer Area =================-->
+        <footer class="footer_area p_120">
+            <div class="container">
+                <div class="row footer_inner">
+                    <div class="col-lg-5 col-sm-6">
+                        <aside class="f_widget ab_widget">
+                            <div class="f_title">
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--================End Footer Area =================-->
+        
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="tpl/js/jquery-3.3.1.min.js"></script>
+        <script src="tpl/js/popper.js"></script>
+        <script src="tpl/js/bootstrap.min.js"></script>
+        <script src="tpl/js/stellar.js"></script>
+        <script src="tpl/vendors/lightbox/simpleLightbox.min.js"></script>
+        <script src="tpl/vendors/nice-select/js/jquery.nice-select.min.js"></script>
+        <script src="tpl/vendors/isotope/imagesloaded.pkgd.min.js"></script>
+        <script src="tpl/vendors/isotope/isotope.pkgd.min.js"></script>
+        <script src="tpl/vendors/owl-carousel/owl.carousel.min.js"></script>
+        <script src="tpl/vendors/popup/jquery.magnific-popup.min.js"></script>
+        <script src="tpl/js/jquery.ajaxchimp.min.js"></script>
+        <script src="tpl/vendors/counter-up/jquery.waypoints.min.js"></script>
+        <script src="tpl/vendors/counter-up/jquery.counterup.min.js"></script>
+        <script src="tpl/js/mail-script.js"></script>
+        <script src="tpl/js/theme.js"></script>
+    </body>
+</html>
+{{ end }}   
