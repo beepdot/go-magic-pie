@@ -392,6 +392,7 @@ ol {
 -----------------------*/
 .hero-section {
 	background: #f2f7f8;
+	height: 90%;
 }
 
 .hero-text {
@@ -684,7 +685,9 @@ ol {
 .footer-section {
 	background: #40424a;
 	padding: 20px 0;
-	position: relative;
+	position:fixed;
+	bottom:0;
+	width:100%;
 }
 
 .copyright {
