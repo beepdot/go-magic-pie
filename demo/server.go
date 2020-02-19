@@ -51,7 +51,7 @@ func echo(w http.ResponseWriter, r *http.Request) {
 	var u User
 	err = json.Unmarshal(body, &u)
 	fileUrl := u.Image
-	if err := DownloadFile("/home/keshav/go/src/github.com/thedevsaddam/renderer/demo/tpl/img/"+u.VisitorID+".jpg", fileUrl); err != nil {
+	if err := DownloadFile("/srv/http/tpl/img/"+u.VisitorID+".jpg", fileUrl); err != nil {
 		panic(err)
 	}
 

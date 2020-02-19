@@ -1,25 +1,57 @@
-<!DOCTYPE html>
-<html>
-<body>
+
 <?php
-// mysqli
-$mysqli = new mysqli("localhost", "root", "root", "database");
-$result = $mysqli->query("SELECT 'Hello, dear MySQL user!' AS _message FROM DUAL");
-$row = $result->fetch_assoc();
-echo htmlentities($row['_message']);
+// Array with names
+$a[] = "Anna";
+$a[] = "Brittany";
+$a[] = "Cinderella";
+$a[] = "Diana";
+$a[] = "Eva";
+$a[] = "Fiona";
+$a[] = "Gunda";
+$a[] = "Hege";
+$a[] = "Inga";
+$a[] = "Johanna";
+$a[] = "Kitty";
+$a[] = "Linda";
+$a[] = "Nina";
+$a[] = "Ophelia";
+$a[] = "Petunia";
+$a[] = "Amanda";
+$a[] = "Raquel";
+$a[] = "Cindy";
+$a[] = "Doris";
+$a[] = "Eve";
+$a[] = "Evita";
+$a[] = "Sunniva";
+$a[] = "Tove";
+$a[] = "Unni";
+$a[] = "Violet";
+$a[] = "Liza";
+$a[] = "Elizabeth";
+$a[] = "Ellen";
+$a[] = "Wenche";
+$a[] = "Vicky";
 
-// PDO
-$pdo = new PDO('mysql:host=localhost;dbname=database', 'root', 'root');
-$statement = $pdo->query("SELECT 'Hello, dear MySQL user!' AS _message FROM DUAL");
-$row = $statement->fetch(PDO::FETCH_ASSOC);
-echo htmlentities($row['_message']);
+// get the q parameter from URL
+$q = $_REQUEST["q"];
 
-// mysql
-$c = mysql_connect("localhost", "root", "root");
-mysql_select_db("database");
-$result = mysql_query("SELECT 'Hello, dear MySQL user!' AS _message FROM DUAL");
-$row = mysql_fetch_assoc($result);
-echo htmlentities($row['_message']);
-?>
-</body>
-</html>
+$hint = "";
+
+// lookup all hints from array if $q is different from ""
+if ($q !== "") {
+    $q = strtolower($q);
+    $len=strlen($q);
+    foreach($a as $name) {
+        if (stristr($q, substr($name, 0, $len))) {
+            if ($hint === "") {
+                $hint = $name;
+            } else {
+                $hint .= ", $name";
+            }
+        }
+    }
+}
+
+// Output "no suggestion" if no hint was found or output correct values
+echo $hint === "" ? "no suggestion" : $hint;
+?> 

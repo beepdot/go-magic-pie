@@ -1,103 +1,106 @@
-{{ define "home" }}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Magic Mirror</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Favicon -->   
-	<link href="tpl/img/favicon.ico" rel="shortcut icon"/>
+        <title>Magic Mirror</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Favicon -->   
+        <link href="tpl/img/favicon.ico" rel="shortcut icon"/>
 
-	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600,600i,700" rel="stylesheet">
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600,600i,700" rel="stylesheet">
 
-	<!-- Stylesheets -->
-	<link rel="stylesheet" href="tpl/css/bootstrap.min.css"/>
-	<link rel="stylesheet" href="tpl/css/font-awesome.min.css"/>
-	<link rel="stylesheet" href="tpl/css/flaticon.css"/>
-	<link rel="stylesheet" href="tpl/css/owl.carousel.css"/>
-	<link rel="stylesheet" href="tpl/css/magnific-popup.css"/>
-	<link rel="stylesheet" href="tpl/css/style.css"/>
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="tpl/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="tpl/css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="tpl/css/flaticon.css"/>
+        <link rel="stylesheet" href="tpl/css/owl.carousel.css"/>
+        <link rel="stylesheet" href="tpl/css/magnific-popup.css"/>
+        <link rel="stylesheet" href="tpl/css/style.css"/>
 
 
-	<!--[if lt IE 9]>
-	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+<script>
+function herotxt() {
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("heroreplace").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET","herotxt.php",true);
+        xmlhttp.send();
+}
+</script>
+
+<script>
+	setTimeout(function(){
+	   window.location.href = 'screensaver.html';
+	}, 5000);
+ </script>
 
 </head>
-<body>
-	<!-- Page Preloder -->
-	<div id="preloder">
-		<div class="loader"></div>
-	</div>
-	
-	<!-- Header section start -->
-	<header class="header-section">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-md-4">
-					<div class="site-logo">
-						<h2><a href="#">Magic Mirror</a></h2>
-						<p>Where authentication happens</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
-	<!-- Header section end -->
+<body onload="herotxt()">
+        <!-- Page Preloder -->
+        <div id="preloder">
+                <div class="loader"></div>
+        </div>
 
-	<!-- Hero section start -->
-	<section class="hero-section spad">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-xl-10 offset-xl-1">
-					<div class="row">
-						<div class="col-lg-6">
-							<div class="hero-text">
-								<h2>{{ .Name }}</h2>
-								<p>Welcome to devops stall</p>
-							</div>
-							<div class="hero-info">
-								<h2>Visitor Details</h2>
-								<ul>
-									<li><span>Name</span>{{ .Name }}</li>
-									<li><span>Visitor ID</span>{{ .VisitorID }}</li>
-									<li><span>Stalls</span>{{ .Stalls }} visited</li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-lg-6">
-							<figure class="hero-image">
-								<img src="tpl/img/{{ .VisitorID}}.jpg" alt="5">
-							</figure>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Hero section end -->
+        <!-- Header section start -->
+        <header class="header-section">
+                <div class="container-fluid">
+                        <div class="row">
+                                <div class="col-md-4">
+                                        <div class="site-logo">
+                                                <h2><a href="#">Magic Mirror</a></h2>
+                                                <p>Where authentication happens</p>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </header>
+        <!-- Header section end -->
 
-	<!-- Footer section start -->
-	<footer class="footer-section">
-		<div class="container text-center">
-			<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        <!-- Hero section start -->
+        <section class="hero-section spad">
+                <div class="container-fluid">
+                        <div class="row">
+                                <div class="col-xl-10 offset-xl-1">
+                                        <div id=heroreplace>
+                                </div>
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <!-- Hero section end -->
+
+        <!-- Footer section start -->
+        <footer class="footer-section">
+                <div class="container text-center">
+                        <div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 </div>
-		</div>
-	</footer>
-	<!-- Footer section end -->
+                </div>
+        </footer>
+        <!-- Footer section end -->
 
 
-	<!--====== Javascripts & Jquery ======-->
-	<script src="tpl/js/jquery-2.1.4.min.js"></script>
-	<script src="tpl/js/bootstrap.min.js"></script>
-	<script src="tpl/js/owl.carousel.min.js"></script>
-	<script src="tpl/js/magnific-popup.min.js"></script>
-	<script src="tpl/js/circle-progress.min.js"></script>
-	<script src="tpl/js/main.js"></script>
+        <!--====== Javascripts & Jquery ======-->
+        <script src="tpl/js/jquery-2.1.4.min.js"></script>
+        <script src="tpl/js/bootstrap.min.js"></script>
+        <script src="tpl/js/owl.carousel.min.js"></script>
+        <script src="tpl/js/magnific-popup.min.js"></script>
+        <script src="tpl/js/circle-progress.min.js"></script>
+        <script src="tpl/js/main.js"></script>
 </body>
 </html>
-{{ end }}
